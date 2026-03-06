@@ -1,0 +1,15 @@
+print "Hello, Lox!"; // print 语句
+
+// 闭包
+fun returnFunc(a) {
+    fun func() {
+        // 形参可以作为左值 不好
+        a = a + 1;
+        return a;
+    }
+    return func;
+}
+var function = returnFunc(0);
+print function();
+print function();
+print function();
